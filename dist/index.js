@@ -110,7 +110,7 @@
         var paths = [];
         var dataStates = (0, _usaMapDimensions2.default)();
         for (var stateKey in dataStates) {
-          var path = _react2.default.createElement(_USAState2.default, { key: stateKey, stateName: dataStates[stateKey].name, dimensions: dataStates[stateKey]["dimensions"], state: stateKey, fill: _this.fillStateColor(stateKey), onClickState: _this.stateClickHandler(stateKey) });
+          var path = _react2.default.createElement(_USAState2.default, { key: stateKey, stroke: "#FFFFFF", strokeWidth: "1.5", stateName: dataStates[stateKey].name, dimensions: dataStates[stateKey]["dimensions"], state: stateKey, fill: _this.fillStateColor(stateKey), onClickState: _this.stateClickHandler(stateKey) });
           paths.push(path);
         };
         return paths;
@@ -128,17 +128,17 @@
             null,
             this.props.title
           ),
-          _react2.default.createElement(
-            "g",
-            { className: "outlines" },
-            this.buildPaths(),
-            _react2.default.createElement(
-              "g",
-              { className: "DC state" },
-              _react2.default.createElement("path", { className: "DC1", fill: this.fillStateColor("DC1"), d: "M801.8,253.8 l-1.1-1.6 -1-0.8 1.1-1.6 2.2,1.5z" }),
-              _react2.default.createElement("circle", { className: "DC2", onClick: this.clickHandler, "data-name": "DC", fill: this.fillStateColor("DC2"), stroke: "#FFFFFF", strokeWidth: "1.5", cx: "801.3", cy: "251.8", r: "5", opacity: "1" })
-            )
-          )
+          // _react2.default.createElement(
+          //   "g",
+          //   { className: "outlines" },
+          //   this.buildPaths(),
+          //   _react2.default.createElement(
+          //     "g",
+          //     { className: "DC state" },
+          //     _react2.default.createElement("path", { className: "DC1", fill: this.fillStateColor("DC1"), d: "M801.8,253.8 l-1.1-1.6 -1-0.8 1.1-1.6 2.2,1.5z" }),
+          //     _react2.default.createElement("circle", { className: "DC2", onClick: this.clickHandler, "data-name": "DC", fill: this.fillStateColor("DC2"), stroke: "#FFFFFF", strokeWidth: "1.5", cx: "801.3", cy: "251.8", r: "5", opacity: "1" })
+          //   )
+          // )
         );
       }
     }]);
